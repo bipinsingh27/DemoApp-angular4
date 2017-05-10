@@ -1,0 +1,44 @@
+<h1>Hello {{fisrtName}} {{lastName}}</h1>
+			<p>Address : {{address.street}},{{address.city}},{{address.state}} </p>
+		<button (click)="toggleCourse()">{{showCourse ? "Hide Course" : "Show Course"}}</button>
+			<div *ngIf="showCourse">
+			<h2> Cources </h2>
+		
+			<ul>
+				<li *ngFor=" let course of cources; let i = index">
+						{{course}}<button (click)= "deleteCourse(i)">X</button>			
+				</li>
+			</ul>
+
+			<form (submit) = "addNewCourse(newCourse.value)">
+			      <label>Add Course</label>
+					<input type="text" #newCourse/>
+				</form>
+
+			</div>
+			<hr>
+				<h2> Edit User </h2>
+			<form>
+
+				<br /><label> FirstName: </label>
+				<input type="text" name = "fisrtName" [(ngModel)]="fisrtName" />
+				
+				<br /><br /><label> LastName: </label>
+				<input type="text" name = "lastName" [(ngModel)]="lastName" />
+			
+				<br /><br /><label> Street: </label>
+				<input type="text" name = "address.street" [(ngModel)]="address.street" />
+			
+				<br /><br /><label> City: </label>
+				<input type="text" name = "address.city" [(ngModel)]="address.city" />
+			
+			    <br /><br /><label> State: </label>
+				<input type="text" name = "address.state" [(ngModel)]="address.state" />
+			
+			</form>
+			<hr>
+			<h2>Posts</h2>
+			<div *ngFor="let post of posts">
+			<h3>{{post.title}}</h3>
+			<p>{{post.body}}</p>
+			</div>
