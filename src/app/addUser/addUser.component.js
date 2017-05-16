@@ -9,26 +9,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var posts_service_1 = require("../services/posts.service");
-var userComponent = (function () {
-    function userComponent(postsService) {
-        var _this = this;
-        this.postsService = postsService;
-        this.postsService.getPosts().subscribe(function (posts) {
-            _this.posts = posts;
-        });
+var addUserComponent = (function () {
+    function addUserComponent() {
+        this.fisrtName = 'Roshan';
+        this.lastName = 'kshirsagar';
+        this.address = {
+            street: 'College Road',
+            city: 'Nashik',
+            state: 'MH'
+        };
     }
-    return userComponent;
+    return addUserComponent;
 }());
-userComponent = __decorate([
+addUserComponent = __decorate([
     core_1.Component({
         moduleId: module.id,
-        selector: 'user',
-        templateUrl: "user.components.html",
-        styleUrl: ['user.component.css'],
-        providers: [posts_service_1.PostsService]
+        selector: 'addUser',
+        templateUrl: "addUser.component.html"
     }),
-    __metadata("design:paramtypes", [posts_service_1.PostsService])
-], userComponent);
-exports.userComponent = userComponent;
-//# sourceMappingURL=user.component.js.map
+    __metadata("design:paramtypes", [])
+], addUserComponent);
+exports.addUserComponent = addUserComponent;
+//# sourceMappingURL=addUser.component.js.map

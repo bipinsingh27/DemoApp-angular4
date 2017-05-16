@@ -1,0 +1,25 @@
+<h2> Add User </h2>
+<form>
+    <br />
+    <label> FirstName: </label>
+    <input type="text" name="fisrtName" [(ngModel)]="fisrtName" />
+    <br />
+    <br />
+    <label> LastName: </label>
+    <input type="text" name="lastName" [(ngModel)]="lastName" />
+    <br />
+    <br />
+    <label> Street: </label>
+    <input type="text" name="address.street" [(ngModel)]="address.street" />
+    <br />
+    <br />
+    <label> City: </label>
+    <input type="text" name="address.city" [(ngModel)]="address.city" />
+    <br />
+    <br />
+    <label> State: </label>
+    <input type="text" name="address.state" [(ngModel)]="address.state" />
+</form>
+<hr>
+<h1>Hello {{fisrtName}} {{lastName}}</h1>
+<p>Address : {{address.street}},{{address.city}},{{address.state}} </p>
